@@ -1,12 +1,12 @@
 import React from 'react'
 import Student from './Student'
 
-function StudentsList(props) {
-    const list = props.list.map(student =>
-        <Student student={student} />)
+function StudentsList({deleteStudent, list}) {
+    const listOfStudents = list.map((student) =>
+        <Student student={student}  deleteStudent={deleteStudent} />)
     return (
         <div>
-            {list}
+            {listOfStudents}
         </div>
     )
 }

@@ -1,7 +1,7 @@
 import React from 'react'
 
-function Student(props) {
-    const student = props.student
+function Student({deleteStudent, student}) {
+    
     return (
 
         <div className="student">
@@ -11,7 +11,9 @@ function Student(props) {
                 <li>phone number :{student.phoneNumber}</li>
                 <li>power: {student.power}</li>
             </ul>
-            <p className="delete">delete</p>
+            <p className="delete" onClick={()=> deleteStudent(student.id)}>
+                delete
+                </p>
         </div>
 
     )
